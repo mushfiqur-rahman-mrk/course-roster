@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+ 
  
 
 const Sidebar = ({selectedCourses,CreditHours,totalprice,reaminingCredits}) => {
@@ -36,6 +36,7 @@ const Sidebar = ({selectedCourses,CreditHours,totalprice,reaminingCredits}) => {
 Sidebar.propTypes = {
     selectedCourses:PropTypes.array,
     totalprice:PropTypes.number,
-    CreditHours:PropTypes.number
+    CreditHours:PropTypes.number,
+    reaminingCredits:PropTypes.number
 };
 export default Sidebar;

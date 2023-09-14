@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+ 
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Cards from '../Cards/Cards';
@@ -22,27 +22,26 @@ const Home = () => {
     // const set=setremainingCredit(newremainingCredit);
 
     const selectedCourse=(course,id)=>{
-        const creadithour=course.credit
-        const newcredithour=CreditHours+creadithour;
-        SetCreditHours(newcredithour);
-
         
-        const newremainingCredit=(reaminingCredits - course.credit);
-        setremainingCredit(newremainingCredit);
-
-        const price=course.price;
-        const newprice=totalprice+price;
-        settotalprice(newprice);
-        
-        console.log(course)
         const isExist=selectedCourses.find(item=>item.id==id)
-        console.log(isExist);
+     
         if(isExist){
             return alert('This course is already selected.')
         }
         else{
             const newCourse=[...selectedCourses,course];
             setselectedCourses(newCourse);
+            // handle course creadit
+            const creadithour=course.credit;
+            const newcredithour=CreditHours+creadithour;
+            SetCreditHours(newcredithour);
+            // handle Remaining Credit hour
+            const newremainingCredit=(reaminingCredits - course.credit);
+            setremainingCredit(newremainingCredit);
+            // handel Total Price
+            const price=course.price;
+            const newprice=totalprice+price;
+            settotalprice(newprice);
         }
        
     }
@@ -65,9 +64,6 @@ const Home = () => {
     );
 };
 
-Home.propTypes = {
-
-};
 
 
 

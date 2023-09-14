@@ -10,7 +10,7 @@ const Cards = ({course,selectedCourse}) => {
                 <figure><img className='w-full ' src={image} alt="Shoes" /></figure>
                 <div className="">
                     <h2 className="card-title text-lg mt-4 text-black">{title}</h2>
-                    <p className='text-sm text-gray-400 pt-2 text-justify'>{description.slice(0,200)}. . . .</p>
+                    <p className='text-sm text-gray-400 pt-2 text-justify'>{description.slice(0,170)}..</p>
                     <div className='flex justify-between my-3'>
                         <div className='flex'>
                         <img src="dollar-sign 1.png" alt="" />

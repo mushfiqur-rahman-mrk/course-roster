@@ -14,7 +14,7 @@ const Home = () => {
     },[])
 
     return (
-        <div className='flex'>
+        <div className='flex container mx-auto'>
             <div className='w-3/4 grid grid-cols-3 gap-8'>
                 {
                     courses.map(course=> <Cards key={course.id} course={course}></Cards>)

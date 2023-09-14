@@ -10,7 +10,7 @@ const Cards = ({course}) => {
                 <figure><img className='w-full ' src={image} alt="Shoes" /></figure>
                 <div className="">
                     <h2 className="card-title text-lg mt-4">{title}</h2>
-                    <p className='text-sm'>If a dog chews shoes whose shoes does he choose?</p>
+                    <p className='text-sm'>{description}</p>
                     <div className="card-actions w-full">
                         <button className="btn btn-info w-full font-bold text-base text-white">Select</button>
                     </div>

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Bismillah</h1>
+      <h1 className='text-center text-2xl font-bold my-6'>Course Registration</h1>
       <Home></Home>
     </>
   )

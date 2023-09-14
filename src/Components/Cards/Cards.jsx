@@ -1,7 +1,7 @@
  import PropTypes from 'prop-types';
  
 
-const Cards = ({course}) => {
+const Cards = ({course,selectedCourse}) => {
     // console.log(course);
     const {id,image,title,description,price,credit}=course
     return (
@@ -10,7 +10,7 @@ const Cards = ({course}) => {
                 <figure><img className='w-full ' src={image} alt="Shoes" /></figure>
                 <div className="">
                     <h2 className="card-title text-lg mt-4 text-black">{title}</h2>
-                    <p className='text-sm text-gray-400 pt-2'>{description}</p>
+                    <p className='text-sm text-gray-400 pt-2 text-justify'>{description.slice(0,200)}. . . .</p>
                     <div className='flex justify-between my-3'>
                         <div className='flex'>
                         <img src="dollar-sign 1.png" alt="" />
@@ -22,7 +22,7 @@ const Cards = ({course}) => {
                         </div>
                     </div>
                     <div className="card-actions w-full">
-                        <button className="btn btn-info w-full font-bold text-base text-white">Select</button>
+                        <button onClick={()=>selectedCourse(course,id)} className="btn btn-info w-full font-bold text-base text-white">Select</button>
                     </div>
                 </div>
             </div>
@@ -33,6 +33,7 @@ const Cards = ({course}) => {
 
 Cards.propTypes = {
     course: PropTypes.object.isRequired,
+    selectedCourse: PropTypes.func
 };
 
 export default Cards;

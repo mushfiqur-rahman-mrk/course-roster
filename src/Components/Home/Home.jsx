@@ -6,19 +6,39 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const Home = () => {
     const [courses,setcourses]=useState([]);
-    const [selectedCourses,setselectedCourses]=useState([])
+    const [selectedCourses,setselectedCourses]=useState([]);
+    const [CreditHours,SetCreditHours]=useState(0);
+    const [totalprice,settotalprice]=useState(0);
+    const [reaminingCredits,setremainingCredit]=useState(20);
+    
+
     useEffect(()=>{
         fetch('courses.json')
         .then(res => res.json())
         .then(data => setcourses(data))
 
     },[]);
+    
+    // const set=setremainingCredit(newremainingCredit);
+
     const selectedCourse=(course,id)=>{
+        const creadithour=course.credit
+        const newcredithour=CreditHours+creadithour;
+        SetCreditHours(newcredithour);
+
+        
+        const newremainingCredit=(reaminingCredits - course.credit);
+        setremainingCredit(newremainingCredit);
+
+        const price=course.price;
+        const newprice=totalprice+price;
+        settotalprice(newprice);
+        
         console.log(course)
         const isExist=selectedCourses.find(item=>item.id==id)
         console.log(isExist);
         if(isExist){
-            return alert('This Course is already selected.')
+            return alert('This course is already selected.')
         }
         else{
             const newCourse=[...selectedCourses,course];
@@ -34,7 +54,13 @@ const Home = () => {
                     courses.map((course,idx)=> <Cards key={idx} selectedCourse={selectedCourse}  course={course}></Cards>)
                 }
             </div>
-            <Sidebar selectedCourses={selectedCourses}  className="w-1/4"></Sidebar>
+            <Sidebar className="w-1/4"
+            selectedCourses={selectedCourses}
+            CreditHours={CreditHours}
+            totalprice={totalprice}
+            reaminingCredits={reaminingCredits}
+
+              ></Sidebar>
         </div>
     );
 };

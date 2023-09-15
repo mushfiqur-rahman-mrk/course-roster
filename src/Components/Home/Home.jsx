@@ -20,7 +20,9 @@ const Home = () => {
     },[]);
     
     // const set=setremainingCredit(newremainingCredit);
+    console.log(reaminingCredits);
 
+          
     const selectedCourse=(course,id)=>{
         
         const isExist=selectedCourses.find(item=>item.id==id)
@@ -29,22 +31,44 @@ const Home = () => {
             return alert('This course is already selected.')
         }
         else{
-            const newCourse=[...selectedCourses,course];
-            setselectedCourses(newCourse);
-            // handle course creadit
-            const creadithour=course.credit;
-            const newcredithour=CreditHours+creadithour;
-            SetCreditHours(newcredithour);
             // handle Remaining Credit hour
-            const newremainingCredit=(reaminingCredits - course.credit);
-            setremainingCredit(newremainingCredit);
-            // handel Total Price
-            const price=course.price;
-            const newprice=totalprice+price;
-            settotalprice(newprice);
+            
+            if(reaminingCredits> 0){
+                
+                const newremainingCredit=(reaminingCredits - course.credit);
+                setremainingCredit(newremainingCredit)
+                // handle now course 
+                const newCourse=[...selectedCourses,course];
+                setselectedCourses(newCourse);
+                // handle course creadit
+                const creadithour=course.credit;
+                const newcredithour=CreditHours+creadithour;
+                SetCreditHours(newcredithour);
+                
+                // handel Total Price
+                const price=course.price;
+                const newprice=totalprice+price;
+                console.log(newprice);
+                const tofixedNewPrice=parseFloat(newprice.toFixed(2));
+                console.log(tofixedNewPrice);
+                settotalprice(tofixedNewPrice);
+                // settotalprice(newprice);
+               
+                
+            }
+                else{
+                    alert(`You don't have enough credit to select this course.`)
+                }
+            
         }
        
     }
+ 
+    
+    // if(reaminingCredits> 0){
+    //      selectedCourse()
+    // }
+    // else{alert('tka nai')}
 
     return (
         <div className='flex container mx-auto'>

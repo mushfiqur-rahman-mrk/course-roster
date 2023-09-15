@@ -2,7 +2,7 @@
  import { Toaster } from 'react-hot-toast'; 
 
 const Cards = ({course,selectedCourse}) => {
-    // console.log(course);
+     
     const {id,image,title,description,price,credit}=course
     return (
         <>
@@ -22,7 +22,7 @@ const Cards = ({course,selectedCourse}) => {
                         </div>
                     </div>
                     <div className="card-actions w-full">
-                        <button onClick={()=>selectedCourse(course,id)} className="btn btn-info w-full font-bold text-base text-white">Select</button>
+                        <button onClick={()=>selectedCourse(course,id)} className="btn btn-info hover:bg-blue-500 w-full font-bold text-base text-white">Select</button>
                         <Toaster />
                     </div>
                 </div>

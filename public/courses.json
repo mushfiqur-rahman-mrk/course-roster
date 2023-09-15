@@ -42,7 +42,7 @@
     {
       "id": 6,
       "title": "Software Engineering",
-      "image": "https://i.ibb.co/GCMXcqF/Rectangle-2-5.png",
+      "image": "https://i.ibb.co/LnqZ5kT/softwear.png",
       "description": "Gain a solid understanding of software engineering principles, methods, and best practices. Perfect for beginners looking to delve into the world of software development and engineering processes.",
       "price": 195,
       "credit": 2
@@ -66,7 +66,7 @@
     {
         "id": 9,
         "title": "Problem-Solving Part",
-        "image": "https://i.ibb.co/xmLw2rj/Rectangle-2-6.png",
+        "image": "https://i.ibb.co/nmvBp0d/Rectangle-2-6.png",
         "description": "Sharpen your problem-solving skills. Designed for beginners aiming to excel in critical thinking and logic.Enhance your problem-solving abilities. Perfect for beginners.",
         "price": 39.99,
         "credit": 7

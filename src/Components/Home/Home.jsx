@@ -20,7 +20,7 @@ const Home = () => {
     },[]);
     
     // const set=setremainingCredit(newremainingCredit);
-    console.log(reaminingCredits);
+ 
 
           
     const selectedCourse=(course,id)=>{
@@ -29,15 +29,15 @@ const Home = () => {
      
         if(isExist){
             // return alert('This course is already selected.')
-            toast.error("This course is already selected.")
+            toast.error(`${course.title} is already selected.` )
         }
         else{
             // handle Remaining Credit hour
             const newremainingCredit=(reaminingCredits - course.credit);
             
-            console.log(reaminingCredits);
+           
             
-            if(newremainingCredit> 0){
+            if(newremainingCredit>= 0){
                 
                 setremainingCredit(newremainingCredit)
                
@@ -52,16 +52,16 @@ const Home = () => {
                 // handel Total Price
                 const price=course.price;
                 const newprice=totalprice+price;
-                console.log(newprice);
+           
                 const tofixedNewPrice=parseFloat(newprice.toFixed(2));
-                console.log(tofixedNewPrice);
+             
                 settotalprice(tofixedNewPrice);
                 // settotalprice(newprice);
                
                 
             }
                 else{
-                    toast.error("You don't have enough credit.");
+                    toast.error("You don't have enough credit hour!");
                 }
             
         }
@@ -69,7 +69,7 @@ const Home = () => {
     }
 
     return (
-        <div className='flex container mx-auto mb-10'>
+        <div className='  flex container mx-auto mb-10 px-4 '>
             <div className='xl:w-3/4 md:w-1/2 grid lg:grid-cols-2 lg:w-3/2 xl:grid-cols-3 gap-8'>
                 {
                     courses.map((course,idx)=> <Cards key={idx} selectedCourse={selectedCourse}  course={course}></Cards>)

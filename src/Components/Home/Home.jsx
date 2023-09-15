@@ -1,4 +1,4 @@
- 
+import toast  from 'react-hot-toast';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Cards from '../Cards/Cards';
@@ -28,15 +28,19 @@ const Home = () => {
         const isExist=selectedCourses.find(item=>item.id==id)
      
         if(isExist){
-            return alert('This course is already selected.')
+            // return alert('This course is already selected.')
+            toast.error("This course is already selected.")
         }
         else{
             // handle Remaining Credit hour
+            const newremainingCredit=(reaminingCredits - course.credit);
             
-            if(reaminingCredits> 0){
+            console.log(reaminingCredits);
+            
+            if(newremainingCredit> 0){
                 
-                const newremainingCredit=(reaminingCredits - course.credit);
                 setremainingCredit(newremainingCredit)
+               
                 // handle now course 
                 const newCourse=[...selectedCourses,course];
                 setselectedCourses(newCourse);
@@ -57,27 +61,21 @@ const Home = () => {
                 
             }
                 else{
-                    alert(`You don't have enough credit to select this course.`)
+                    toast.error("You don't have enough credit.");
                 }
             
         }
        
     }
- 
-    
-    // if(reaminingCredits> 0){
-    //      selectedCourse()
-    // }
-    // else{alert('tka nai')}
 
     return (
-        <div className='flex container mx-auto'>
-            <div className='w-3/4 grid grid-cols-3 gap-8'>
+        <div className='flex container mx-auto mb-10'>
+            <div className='xl:w-3/4 md:w-1/2 grid lg:grid-cols-2 lg:w-3/2 xl:grid-cols-3 gap-8'>
                 {
                     courses.map((course,idx)=> <Cards key={idx} selectedCourse={selectedCourse}  course={course}></Cards>)
                 }
             </div>
-            <Sidebar className="w-1/4"
+            <Sidebar className="xl:w-1/4 lg:w-1/3 md:w-1/2"
             selectedCourses={selectedCourses}
             CreditHours={CreditHours}
             totalprice={totalprice}

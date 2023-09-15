@@ -25,7 +25,7 @@ const Sidebar = ({selectedCourses,CreditHours,totalprice,reaminingCredits}) => {
                     <hr className='my-4  bg-gray-600' />
                     <p className="text-black font-semibold text-lg ">Total Credit Hour: {CreditHours} </p>
                     <hr className='my-4  bg-gray-600' />
-                    <p className="text-black font-semibold text-lg ">Total Price: {totalprice} USD</p>
+                    <p className="text-black font-semibold text-lg ">Total Price: $ {totalprice} USD</p>
                     
                 </div>
             </div>

@@ -1,13 +1,13 @@
  import PropTypes from 'prop-types';
- 
+ import { Toaster } from 'react-hot-toast'; 
 
 const Cards = ({course,selectedCourse}) => {
     // console.log(course);
     const {id,image,title,description,price,credit}=course
     return (
-        <div>
-            <div className="card bg-white shadow-xl p-4">
-                <figure><img className='w-full ' src={image} alt="Shoes" /></figure>
+        <>
+            <div className="card bg-white shadow-xl p-4 mb-4">
+                <figure><img className='w-full rounded-b-lg ' src={image} alt="Shoes" /></figure>
                 <div className="">
                     <h2 className="card-title text-lg mt-4 text-black">{title}</h2>
                     <p className='text-sm text-gray-400 pt-2 text-justify'>{description.slice(0,170)}..</p>
@@ -23,10 +23,11 @@ const Cards = ({course,selectedCourse}) => {
                     </div>
                     <div className="card-actions w-full">
                         <button onClick={()=>selectedCourse(course,id)} className="btn btn-info w-full font-bold text-base text-white">Select</button>
+                        <Toaster />
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
  

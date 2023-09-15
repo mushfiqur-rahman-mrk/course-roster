@@ -1,72 +1,72 @@
 [
     {
-      "id": 1,
-      "image": "https://i.ibb.co/fkNNmWy/Rectangle-2-2.png",
-      "title": "Introduction to C Programming",
-      "description": "This course serves as an excellent entry point into the world of programming and software development. You'll embark on a journey to learn one of the most foundational programming languages, C. Known for its simplicity and power, C has been a cornerstone of software development for decades.",
+      "id":1,
+      "title": "Introduction to Programming",
+      "image":"https://i.ibb.co/Scnrh03/intro-to-programming-Basics-or-c.jpg",
+      "description": "Learn the fundamentals of programming and start your journey into the world of software development. This course covers key programming concepts and provides hands-on exercises to build your coding skills.",
       "price": 149.99,
       "credit": 1
     },
     {
       "id": 2,
-      "image": "https://i.ibb.co/HGYJf76/Rectangle-2-3.png",
-      "title": "Introduction to Algorithms",
-      "description": "This course offers a comprehensive introduction to the fundamental concepts of algorithms, a cornerstone of computer science and problem-solving. Dive into the world of algorithmic thinking and gain insights into designing efficient algorithms for a wide range of applications. Master the art of problem-solving in the digital age.",
+      "title": "Web Development Essential",
+      "image": "https://i.ibb.co/f1HHKvh/0-XB7-Ep7b6k-Noa-Nr-ZQUUP5lrai-LNR0n-Kl.jpg",
+      "description": "Dive into web development with this comprehensive course. Explore HTML, CSS, and JavaScript to create interactive and responsive web applications.Also you will learn treanding css frame-work tailwind.",
       "price": 100,
       "credit": 2
     },
     {
       "id": 3,
-      "image": "https://i.ibb.co/41K9yJY/Rectangle-2-4.png",
-      "title": "Introduction to C++ for DSA",
-      "description": "This course is your gateway to mastering C++ programming in the context of Data Structures and Algorithms (DSA). Dive into the world of C++ and explore how it can be leveraged to implement and optimize essential data structures and algorithms. Whether you're preparing for competitive coding or building a strong foundation in computer science, this course equips you with the skills needed to excel in DSA challenges and real-world software development.",
+      "title": "Python for Data Science",
+      "image": "https://i.ibb.co/4mCSF94/python-data-science-1.webp",
+      "description": "Unlock the power of Python for data analysis and machine learning. Learn data manipulation, visualization, and machine learning algorithms to solve real-world problems.",
       "price": 89.99,
       "credit": 10
     },
     {
       "id": 4,
-      "image": "https://i.ibb.co/q5vMYjZ/Rectangle-3.png",
-      "title": "Basic Data Structures",
-      "description": "Explore fundamental data structures, including arrays, linked lists, stacks, and queues. Learn to apply them for efficient programming. Perfect for beginners and those looking to reinforce their programming foundations.",
+      "title": "Mobile App Development ",
+      "image": "https://i.ibb.co/g4fnP0R/1-8-Nj-DXi-ICAKMgw-EX3-UEx85w-1.png",
+      "description": "Build cross-platform mobile apps using React Native. This course covers app development for iOS and Android, allowing you to reach a broad audience with your creations.",
       "price": 69.99,
       "credit": 5
     },
     {
       "id": 5,
-      "image": "https://i.ibb.co/nmygXLS/rectangle.png",
-      "title": "Introduction to OOP Python",
-      "description": "Learn Python's object-oriented programming (OOP) fundamentals. Ideal for Python beginners.Start your programming journey with Python and learn the basics of coding.",
+      "title": "Machine Learning Masterclass",
+      "image": "https://i.ibb.co/LZ7H9gd/ml-e1610553826718-1.jpg",
+      "description": "Become a machine learning expert with this in-depth masterclass. Explore advanced algorithms, deep learning, and practical applications in fields like image recognition and natural language processing.",
       "price": 110,
       "credit": 5
     },
     {
       "id": 6,
-      "image": "https://i.ibb.co/GCMXcqF/Rectangle-2-5.png",
       "title": "Software Engineering",
+      "image": "https://i.ibb.co/GCMXcqF/Rectangle-2-5.png",
       "description": "Gain a solid understanding of software engineering principles, methods, and best practices. Perfect for beginners looking to delve into the world of software development and engineering processes.",
       "price": 195,
       "credit": 2
     },
     {
       "id": 7,
-      "image": "https://i.ibb.co/mJ7GpSN/Rectangle-3-1.png",
-      "title": "AWS, Cloud Computing",
-      "description": "Explore cloud computing concepts and get hands-on experience with Amazon Web Services (AWS).Discover the power of Amazon Web Services (AWS) and cloud computing. Perfect for beginners entering the world of cloud technology.",
+      "title": "Full-stack Development",
+      "image": "https://i.ibb.co/PhZt3mD/Full-Stack-Developer-Courses-1.jpg",
+      "description": "Master full-stack web development with JavaScript. Learn to build both the frontend and backend of web applications using popular frameworks like React and Node.js.",
       "price": 210,
       "credit": 3
     },
     {
       "id": 8,
-      "image": "https://i.ibb.co/YWBF1Fc/Rectangle-2-1.png",
-      "title": "Database Design and SQL",
-      "description": "Learn how to design and manage databases and work with SQL for data manipulation.Master database design and SQL for effective data management. Perfect for beginners in database development and management.",
+      "title": "Data Structures and Algorithms",
+      "image": "https://i.ibb.co/TkFW1vG/What-is-Data-Structures-and-Algo.jpg",
+      "description": "Delve into the fundamentals of data structures and algorithms. Enhance your problem-solving abilities and prepare for technical interviews with this essential course.",
       "price": 130.99,
       "credit": 2
     },
     {
         "id": 9,
-        "image": "https://i.ibb.co/xmLw2rj/Rectangle-2-6.png",
         "title": "Problem-Solving Part",
+        "image": "https://i.ibb.co/xmLw2rj/Rectangle-2-6.png",
         "description": "Sharpen your problem-solving skills. Designed for beginners aiming to excel in critical thinking and logic.Enhance your problem-solving abilities. Perfect for beginners.",
         "price": 39.99,
         "credit": 7

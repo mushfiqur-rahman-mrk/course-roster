@@ -32,7 +32,7 @@ const Home = () => {
             toast.error(`${course.title} is already selected.` )
         }
         else{
-            // handle Remaining Credit hour
+            // handle Remaining Credit hour 
             const newremainingCredit=(reaminingCredits - course.credit);
             
            

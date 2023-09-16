@@ -20,9 +20,7 @@ const Home = () => {
     },[]);
     
     // const set=setremainingCredit(newremainingCredit);
- 
-
-          
+    
     const selectedCourse=(course,id)=>{
         
         const isExist=selectedCourses.find(item=>item.id==id)
@@ -34,36 +32,27 @@ const Home = () => {
         else{
             // handle Remaining Credit hour 
             const newremainingCredit=(reaminingCredits - course.credit);
-            
            
-            
             if(newremainingCredit>= 0){
                 
-                setremainingCredit(newremainingCredit)
-               
+                setremainingCredit(newremainingCredit)              
                 // handle now course 
                 const newCourse=[...selectedCourses,course];
                 setselectedCourses(newCourse);
                 // handle course creadit
                 const creadithour=course.credit;
                 const newcredithour=CreditHours+creadithour;
-                SetCreditHours(newcredithour);
-                
+                SetCreditHours(newcredithour);                
                 // handel Total Price
                 const price=course.price;
-                const newprice=totalprice+price;
-           
-                const tofixedNewPrice=parseFloat(newprice.toFixed(2));
-             
+                const newprice=totalprice+price;          
+                const tofixedNewPrice=parseFloat(newprice.toFixed(2));            
                 settotalprice(tofixedNewPrice);
-                // settotalprice(newprice);
-               
-                
+                // settotalprice(newprice);              
             }
                 else{
                     toast.error("You don't have enough credit hour!");
-                }
-            
+                }          
         }
        
     }
@@ -85,8 +74,5 @@ const Home = () => {
         </div>
     );
 };
-
-
-
 
 export default Home;

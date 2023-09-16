@@ -1,12 +1,12 @@
 Question no-1:
 Ans:  
-    Feature no-1 >
+    Feature no-1
     User can select any course easily by clicking the select button .
 
-    Feature no-2 >
+    Feature no-2 
     Total cradit hour for one user is 20 hour.One user can't select more then 20 cradit hour.
 
-    Feature no-3 >
+    Feature no-3
     If the course is already selected user will see an error message on the top if he click the select button again.
   
   
